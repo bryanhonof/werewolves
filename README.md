@@ -1,7 +1,7 @@
 # werewolves
 C++ exam project
 
-# Points list
+## Points list
 - [ ] useful class
 - [ ] correct base class
 - [ ] correct inheritance
