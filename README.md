@@ -1,0 +1,2 @@
+# werewolves
+C++ exam project
