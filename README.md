@@ -1,2 +1,64 @@
 # werewolves
 C++ exam project
+
+# Points list
+- [ ] useful class
+- [ ] correct base class
+- [ ] correct inheritance
+- [ ] seperate header files
+- [ ] useful virtual function
+- [ ] useful polymorfism
+- [ ] correct abstract base class
+- [ ] no mistake in object-oriented programming
+- [ ] useful member function
+- [ ] useful member variabel
+- [ ] correct protections
+- [ ] getters and setters for member variables
+- [ ] at least 2 default constructors
+- [ ] at least 2 specific constructors
+- [ ] at least 2 destructors
+- [ ] useful container class
+- [ ] useful Qt class
+- [ ] clean main (i.e. nothing in the main that shoud be in a class)
+- [ ] operator overloading
+- [ ] useful pointer usage
+- [ ] useful string usage
+- [ ] dynamic memory allocation (new)
+- [ ] dynamic memory removing (delete)
+- [ ] at least 4 useful const
+- [ ] at least 4 useful bool
+- [ ] 2 unsigned chars or other better usage of memory efficient type
+- [ ] template function or class
+- [ ] 2 (modern) call-by-references
+- [ ] everything in one or more self-made namespace(s)
+- [ ] default values in function definition
+- [ ] function overloading
+- [ ] useful useage of this
+- [ ] no globals, but statics if needed
+- [ ] friend function or class
+- [ ] maintanability by good function naming and/or comments everywhere
+- [ ] useful usage of stringstreams
+- [ ] using the correct type on a lot of places (almost everywhere possible)
+- [ ] correctly using const on a lot of places (almost everywhere possible)
+- [ ] correct useage of inline function
+- [ ] useful recursive function
+- [ ] non-type template arguments
+- [ ] useful usage of nullptr
+- [ ] useful usage of (modern) file-I/O
+- [ ] correct usage of command line parameters
+- [ ] useful usage of struct
+- [ ] nesting of classes
+- [ ] useful usage of union
+- [ ] useful usage of enum
+- [ ] multiple inheritance
+- [ ] member initialization in constructors
+- [ ] useful usage of signals/slots
+- [ ] useful network communication
+- [ ] useful usage of threads
+- [ ] robust program that has been extensively tested (proof it)
+- [ ] one complete project that compiles and does not crash
+- [ ] usage of a GUI
+- [ ] usage of OpenGL or other 3D engine
+- [ ] useful usage of an external library
+- [ ] project that works with hardware
+- [ ] a nice extra that you think that should deserve grading (stuff you put time in and is not rewarded by an item above)
