@@ -58,5 +58,7 @@
 - [ ] usage of OpenGL or other 3D engine
 - [ ] useful usage of an external library
 - [ ] project that works with hardware
-- [ ] a nice extra that you think that should deserve grading (stuff you put time in and is not rewarded by an item above)
+- [x] a nice extra that you think that should deserve grading (stuff you put time in and is not rewarded by an item above)
 
+## nice extra
+Code uploaded to github.
