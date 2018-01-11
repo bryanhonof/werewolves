@@ -7,8 +7,8 @@
 - [x] useful polymorfism
 - [ ] correct abstract base class
 - [ ] no mistake in object-oriented programming
-- [ ] useful member function
-- [ ] useful member variabel
+- [x] useful member function
+- [x] useful member variabel
 - [ ] correct protections
 - [x] getters and setters for member variables
 - [x] at least 2 default constructors
@@ -33,7 +33,7 @@
 - [x] useful useage of this
 - [x] no globals, but statics if needed
 - [x] friend function or class
-- [ ] maintanability by good function naming and/or comments everywhere
+- [x] maintanability by good function naming and/or comments everywhere
 - [ ] useful usage of stringstreams
 - [ ] using the correct type on a lot of places (almost everywhere possible)
 - [ ] correctly using const on a lot of places (almost everywhere possible)
@@ -81,6 +81,29 @@ in card.h
 ```cpp
     inline std::string roleToString(player *playerObj) const;
     inline std::string roleToString(ROLE role) const;
+```
+
+## useful member function
+in player.h
+```cpp
+    inline ROLE getRole() const { return this->role; }
+    void setRole(ROLE asignedRole) { this->role = asignedRole; }
+    void setLover(player &lover) { this->inLoveWith = &lover;}
+    std::string getName() const { return name; }
+```
+
+## useful member variabel
+in player.h
+```cpp
+private:
+    std::string name = "";
+    std::string passwd = "";
+    ROLE role = NA;
+    player *inLoveWith = nullptr;
+    bool major = 0;
+    bool isAI = 0;
+    bool isDead = 0;
+    unsigned char hang = 0;
 ```
 
 ## getters and setters for member variables
@@ -192,7 +215,7 @@ game::~game() // deconstructor
 }
 ```
 
-## at least 4 userfull bool
+## at least 4 userful bool
 in player.h
 ```cpp
     bool major = 0;
@@ -206,14 +229,17 @@ protected:
     bool time;
 ```
 
-## at least 4 usefull const 
+## at least 4 useful const 
 in game.h
 ```cpp
-    void setNight() const;
-    void setDay() const;
-    void mainMenu() const;
     void mainArt() const;
     void playersArt(unsigned char players) const;
+```
+
+in player.h
+```cpp
+    inline ROLE getRole() const { return this->role; }
+    std::string getName() const { return name; }
 ```
 
 ## 2 unsigned chars or other better usage of memory efficient type
@@ -274,6 +300,9 @@ friend class game;
 friend class card;
 friend class cupid;
 ```
+
+## maintanability by good function naming and/or comments everywhere
+Tried to name functions so it says what they do.
 
 ## useful recursive function
 in game.cpp
