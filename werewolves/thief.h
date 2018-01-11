@@ -1,12 +1,21 @@
 #ifndef THIEF_H
 #define THIEF_H
 
-#include "cards.h"
+#include "card.h"
+#include "roles.h"
+#include <iostream>
+
+using namespace std;
 
 namespace miller {
-class thief : public cards {
+class thief : public card {
+friend class game;
+
 public:
     thief();
+
+private:
+    ROLE chooseCard ();
 };
 }
 

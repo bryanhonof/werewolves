@@ -1,12 +1,15 @@
 #ifndef TOWNFOLKS_H
 #define TOWNFOLKS_H
 
-#include "cards.h"
 namespace miller {
-class townfolks : public cards {
+class townfolks {
+friend class player;
+
 public:
     townfolks();
     ~townfolks();
+
+private:
 };
 }
 

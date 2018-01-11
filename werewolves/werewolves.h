@@ -1,9 +1,10 @@
 #ifndef WEREWOLVES_H
 #define WEREWOLVES_H
 
-#include "cards.h"
 namespace miller {
-class werewolves : public cards {
+class werewolves {
+friend class player;
+
 public:
     werewolves();
 };

@@ -1,16 +1,21 @@
-#include <iostream>
+#include "global.h"
 #include "game.h"
-
 
 using namespace miller;
 
 int main(/*int argc, char *argv[]*/)
 {
-    cout << "Buy the ""NEW MOON"" DLC now for only $99.99!" << endl;
     srand((unsigned)time(NULL));
-    game Game;
+
+    auto gameObj = new game;
+
 #ifdef DEBUG
-    cout << "Players in game: "<< static_cast<int>(Game.playersInGame()) << endl;
+    cout << "Players in game: "<< static_cast<int>(gameObj->playersInGame()) << endl;
 #endif
+
+    gameObj->startGame();
+
+    delete gameObj;
+
     return 0;
 }

@@ -1,10 +1,8 @@
 #ifndef SEER_H
 #define SEER_H
 
-#include "cards.h"
-
 namespace miller {
-class seer : public cards {
+class seer {
 public:
     seer();
 };

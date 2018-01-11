@@ -1,10 +1,8 @@
 #ifndef WITCH_H
 #define WITCH_H
 
-#include "cards.h"
-
 namespace miller {
-class witch : public cards {
+class witch {
 public:
     witch();
 };

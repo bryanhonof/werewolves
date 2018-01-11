@@ -1,40 +1,42 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "global.h"
-#include "game.h"
+#include "roles.h"
+#include <string>
 
 namespace miller {
-enum ROLE {
-    NA          = 0x0,
-    TOWNFOLKS   = 0x1,
-    WEREWOLVES  = 0x2,
-    SEER        = 0x3,
-    WITCH       = 0x4,
-    THIEF       = 0x5,
-    LITTLE_GIRL = 0x6,
-    HUNTER      = 0x7,
-    CUPID       = 0x8,
-    SHERIFF     = 0x9
-};
 
 class player {
 
 friend class game;
+friend class card;
+friend class cupid;
 
 public:
-    player(string name, string passwd) : name(name), passwd(passwd) {}
-    ROLE getRole() { return this->role; }
-    void setRole(ROLE asignedRole) { this->role = asignedRole; }
-    string getName() { return name; }
-#ifdef DEBUG
-    string getPasswd() { return passwd; } //No security issue here...
+    player(std::string name, std::string passwd, bool isAI)
+        : name(name), passwd(passwd), isAI(isAI) {}
+#ifndef DEBUG
+    ~player() {}
+#else
+    ~player() { cout << "player::~player() at: " << this << endl; }
 #endif
+    inline ROLE getRole() { return this->role; }
+    void setRole(ROLE asignedRole) { this->role = asignedRole; }
+    void setLover(player &lover) { this->inLoveWith = &lover;}
+    std::string getName() { return name; }
+#ifdef DEBUG
+    string getPasswd() { return passwd; } // No security issue here...
+#endif
+
 private:
-    string name = "";
-    string passwd = "";
+    std::string name = "";
+    std::string passwd = "";
     ROLE role = NA;
+    player *inLoveWith = nullptr;
     bool major = 0;
+    bool isAI = 0;
+    bool isDead = 0;
+    unsigned char hang = 0;
 };
 }
 

@@ -1,10 +1,8 @@
 #ifndef HUNTER_H
 #define HUNTER_H
 
-#include "cards.h"
-
 namespace miller {
-class hunter : public cards {
+class hunter {
 public:
     hunter();
 };
