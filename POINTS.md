@@ -1,4 +1,4 @@
-# Points list
+# Points list ~31/60
 - [x] useful class
 - [ ] correct base class
 - [ ] correct inheritance
