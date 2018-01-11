@@ -48,7 +48,7 @@
 - [ ] useful usage of union
 - [x] useful usage of enum
 - [ ] multiple inheritance
-- [ ] member initialization in constructors
+- [x] member initialization in constructors
 - [ ] useful usage of signals/slots
 - [ ] useful network communication
 - [ ] useful usage of threads
@@ -63,6 +63,7 @@
 --------------------------------------------------------------------------------------------------------------------------
 
 ## userfull class
+in game.h
 ```cpp
 class game {
 friend class cupid;
@@ -76,18 +77,21 @@ public:
 Header files enough
 
 ## userfull polyforfism
+in card.h
 ```cpp
     inline std::string roleToString(player *playerObj) const;
     inline std::string roleToString(ROLE role) const;
 ```
 
 ## getters and setters for member variables
+in player.h
 ```cpp
     void setRole(ROLE asignedRole) { this->role = asignedRole; }
     void setLover(player &lover) { this->inLoveWith = &lover;}
 ```
 
 ## at least 2 default constructors
+in card.h & hunter.h
 ```cpp
 class card {
 public:
@@ -99,24 +103,34 @@ public:
 ```
 
 ## at least 2 specific constructors
+in player.h
 ```cpp
     player(std::string name, std::string passwd, bool isAI)
-        : name(name), passwd(passwd), isAI(isAI) {}
-        
-        
+        : name(name), passwd(passwd), isAI(isAI) {}      
+```
+in game.cpp
+```cpp
+game::game() // constructor
+{
+    mainMenu();
+    assignRole();
+}
 ```
 
 ## at least 2 destructors
+almost everywhere
 ```cpp
 Almost every class has a destructor, and there are at LEAST 2 classes.
 ```
 
 ## userfull container class
+in game.h
 ```cpp
 std::vector<player *> players;
 ```
 
 ## clean main
+in main.cpp
 ```cpp
 #include "global.h"
 #include "game.h"
@@ -193,6 +207,7 @@ protected:
 ```
 
 ## at least 4 usefull const 
+in game.h
 ```cpp
     void setNight() const;
     void setDay() const;
@@ -220,17 +235,20 @@ private:
 ```
 
 ## everything in one or more self-made namespace(s)
+in everything
 ```cpp
 namespace miller { ... }
 ```
 
 ## default values in function definition
+in card.h
 ```cpp
     inline std::string roleToString(player *playerObj = nullptr) const;
     inline std::string roleToString(ROLE role = NA) const;
 ```
 
 ## useful useage of this
+in player.h
 ```cpp
     inline ROLE getRole() { return this->role; }
     void setRole(ROLE asignedRole) { this->role = asignedRole; }
@@ -238,6 +256,7 @@ namespace miller { ... }
 ```
 
 ## no globals, but statics if needed
+in game.cpp
 ```cpp
     static player *major = nullptr;
 
@@ -247,6 +266,7 @@ namespace miller { ... }
 ```
 
 ## friend function or class
+in player.h
 ```cpp
 class player {
 
@@ -256,6 +276,7 @@ friend class cupid;
 ```
 
 ## useful recursive function
+in game.cpp
 ```cpp
 player &game::gameHost() // Assign the host/major label to a random player
 {
@@ -280,6 +301,7 @@ player &game::gameHost() // Assign the host/major label to a random player
 ```
 
 ## correct useage of inline function
+in card.h
 ```cpp
     inline std::string roleToString(player *playerObj = nullptr) const;
     inline std::string roleToString(ROLE role = NA) const;
@@ -308,6 +330,7 @@ in game.h
 ```
 
 ## useful usage of enum
+in role.h
 ```cpp
 #ifndef ROLES_H
 #define ROLES_H
@@ -326,6 +349,13 @@ enum ROLE {
 };
 
 #endif // ROLES_H
+```
+
+## member initialization in constructors
+in player.h
+```cpp
+    player(std::string name, std::string passwd, bool isAI)
+        : name(name), passwd(passwd), isAI(isAI) {}
 ```
 
 ## nice extra
