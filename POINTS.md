@@ -329,4 +329,7 @@ enum ROLE {
 ```
 
 ## nice extra
-Code uploaded to github.
+* Code uploaded to github
+* Learnt to work with mercurial SCM
+* Learnt to work with Bitbucket instead of github
+* Tried working with SDL -> Failed very fk*** hard -> stress 5 hours before deadline -> recode everything
