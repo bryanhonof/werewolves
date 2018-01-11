@@ -20,10 +20,10 @@ public:
 #else
     ~player() { cout << "player::~player() at: " << this << endl; }
 #endif
-    inline ROLE getRole() { return this->role; }
+    inline ROLE getRole() const { return this->role; }
     void setRole(ROLE asignedRole) { this->role = asignedRole; }
     void setLover(player &lover) { this->inLoveWith = &lover;}
-    std::string getName() { return name; }
+    std::string getName() const { return name; }
 #ifdef DEBUG
     string getPasswd() { return passwd; } // No security issue here...
 #endif

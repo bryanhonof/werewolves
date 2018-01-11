@@ -11,8 +11,8 @@ public:
     card();
     ~card();
 
-    inline std::string roleToString(player *playerObj) const;
-    inline std::string roleToString(ROLE role) const;
+    inline std::string roleToString(player *playerObj = nullptr) const;
+    inline std::string roleToString(ROLE role = NA) const;
 };
 
 inline std::string card::roleToString(player *playerObj) const
